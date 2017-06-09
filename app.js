@@ -21,13 +21,14 @@ var FirstAndPike = {
   maxCustomers: 65,
   avgCookieSales: 6.3
 }
-function Customers(){
-  Math.random();
-};
 
-Customers();
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-console.log(Customers * FirstAndPike.avgCookieSales)
+var total1 = getRandomInt(23, 65);
+
+console.log(total1 * FirstAndPike.avgCookieSales)
 
   console.log('The average number of cookies sold per customer is ' + FirstAndPike.avgCookieSales)
 
@@ -37,6 +38,14 @@ var SeaTacAirport = {
   avgCookieSales: 1.2
 };
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var total2 = getRandomInt(3, 24);
+
+console.log(total2 * SeaTacAirport.avgCookieSales)
+
   console.log('The average number of cookies sold per customer is ' + SeaTacAirport.avgCookieSales)
 
 var SeattleCenter = {
@@ -44,6 +53,14 @@ var SeattleCenter = {
   maxCustomers: 38,
   avgCookieSales: 3.7
 };
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var total3 = getRandomInt(11, 38);
+
+console.log(total3 * SeattleCenter.avgCookieSales)
 
   console.log('The average number of cookies sold per customer is ' + SeattleCenter.avgCookieSales)
 
@@ -53,6 +70,14 @@ var CapitolHill = {
   avgCookieSales: 2.3
 };
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var total4 = getRandomInt(20, 38);
+
+console.log(total4 * CapitolHill.avgCookieSales)
+
 console.log('The average number of cookies sold per customer is ' + CapitolHill.avgCookieSales)
 
 var Alki = {
@@ -61,4 +86,16 @@ var Alki = {
   avgCookieSales: 4.6
 };
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var total5 = getRandomInt(2, 14);
+
+console.log(total5 * Alki.avgCookieSales)
+
 console.log('The average number of cookies sold per customer is ' + Alki.avgCookieSales)
+
+var array = [total1, total2, total3, total4, total5
+]
+console.log(array)
