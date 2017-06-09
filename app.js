@@ -99,3 +99,16 @@ console.log('The average number of cookies sold per customer is ' + Alki.avgCook
 var array = [total1, total2, total3, total4, total5
 ]
 console.log(array)
+
+
+var ulElement = document.getElementById('Arrays');
+console.log(ulElement);
+
+for (var i = 0; i < array.length ; i++) {
+  var listItemElement = document.createElement('li');
+
+  listItemElement.textContent = 'Total cookies = ' + array[i];
+
+  ulElement.appendChild(listItemElement);
+  console.log(ulElement.children);
+}
