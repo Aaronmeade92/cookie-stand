@@ -1,70 +1,64 @@
 'use strict'
 
-var FirstAndPike [
-  'Minimum Customers per Hour',
-  'Maximum Customers per Hour',
-  'Average Cookies per Customer'
+var locations = [
+  'First and Pike',
+  'SeaTac Airport',
+  'Seattle Center',
+  'Capitol Hill',
+  'Alki'
 ];
 
-var FirstAndPikeObject {
-  0: 'Minimum Customers per Hour',
-  1: 'Maximum Customers per Hour',
-  2: 'Average Cookies per Customer'
+var locationsObject = {
+  0: 'First and Pike',
+  1: 'SeaTac Airport',
+  2: 'Seattle Center',
+  3: 'Capitol Hill',
+  4: 'Alki'
 };
 
-var FirstAndPike {
-  MinCustomers: 23;
-  MaxCustomers: 65;
-  AvgCookieSales: 6.3;
+var FirstAndPike = {
+  minCustomers: 23,
+  maxCustomers: 65,
+  avgCookieSales: 6.3
 }
-console.log('The average number of cookies sold per customer is' + AvgCookieSales)
-
-var SeaTacAirport [
-  'Minimum Customers per Hour',
-  'Maximum Customers per Hour',
-  'Average Cookies per Customer'
-];
-
-var SeaTacAirportObject {
-  0: 'Minimum Customers per Hour',
-  1: 'Maximum Customers per Hour',
-  2: 'Average Cookies per Customer'
+function Customers(){
+  Math.random();
 };
 
+Customers();
 
-var SeattleCenter [
-  'Minimum Customers per Hour',
-  'Maximum Customers per Hour',
-  'Average Cookies per Customer'
-];
+console.log(Customers * FirstAndPike.avgCookieSales)
 
-var SeattleCenterObject {
-  0: 'Minimum Customers per Hour',
-  1: 'Maximum Customers per Hour',
-  2: 'Average Cookies per Customer'
+  console.log('The average number of cookies sold per customer is ' + FirstAndPike.avgCookieSales)
+
+var SeaTacAirport = {
+  minCustomers: 3,
+  maxCustomers: 24,
+  avgCookieSales: 1.2
 };
 
-var CapitolHill [
-  'Minimum Customers per Hour',
-  'Maximum Customers per Hour',
-  'Average Cookies per Customer'
-];
+  console.log('The average number of cookies sold per customer is ' + SeaTacAirport.avgCookieSales)
 
-var CapitolHillObject {
-  0: 'Minimum Customers per Hour',
-  1: 'Maximum Customers per Hour',
-  2: 'Average Cookies per Customer'
+var SeattleCenter = {
+  minCustomers: 11,
+  maxCustomers: 38,
+  avgCookieSales: 3.7
 };
 
+  console.log('The average number of cookies sold per customer is ' + SeattleCenter.avgCookieSales)
 
-var Alki [
-  'Minimum Customers per Hour',
-  'Maximum Customers per Hour',
-  'Average Cookies per Customer'
-];
-
-var AlkiObject {
-  0: 'Minimum Customers per Hour',
-  1: 'Maximum Customers per Hour',
-  2: 'Average Cookies per Customer'
+var CapitolHill = {
+  minCustomers: 20,
+  maxCustomers: 38,
+  avgCookieSales: 2.3
 };
+
+console.log('The average number of cookies sold per customer is ' + CapitolHill.avgCookieSales)
+
+var Alki = {
+  minCustomers: 2,
+  maxCustomers: 14,
+  avgCookieSales: 4.6
+};
+
+console.log('The average number of cookies sold per customer is ' + Alki.avgCookieSales)
