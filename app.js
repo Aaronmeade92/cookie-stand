@@ -16,14 +16,16 @@ var locationsObject = {
   4: 'Alki'
 };
 
+
 var FirstAndPike = 'First and Pike'
 
-var array1 = [locationsObject];
+//var array1 = [locationsObject];
 
 var FirstAndPike = {
   minCustomers: 23,
   maxCustomers: 65,
-  avgCookieSales: 6.3
+  avgCookieSales: 6.3,
+  hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 }
 
 function getRandomInt(min, max) {
@@ -41,7 +43,8 @@ for (var i = 0; i < 16 ; i++) {
 var SeaTacAirport = {
   minCustomers: 3,
   maxCustomers: 24,
-  avgCookieSales: 1.2
+  avgCookieSales: 1.2,
+    hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
 console.log(SeaTacAirport);
@@ -58,7 +61,8 @@ for (var i = 0; i < 16 ; i++) {
 var SeattleCenter = {
   minCustomers: 11,
   maxCustomers: 38,
-  avgCookieSales: 3.7
+  avgCookieSales: 3.7,
+    hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
 console.log(SeattleCenter)
@@ -77,7 +81,8 @@ getRandomInt(11, 38);
 var CapitolHill = {
   minCustomers: 20,
   maxCustomers: 38,
-  avgCookieSales: 2.3
+  avgCookieSales: 2.3,
+    hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
 console.log(CapitolHill);
@@ -91,12 +96,13 @@ for (var i = 0; i < 16 ; i++) {
 var Alki = {
   minCustomers: 2,
   maxCustomers: 14,
-  avgCookieSales: 4.6
+  avgCookieSales: 4.6,
+  hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
 console.log(Alki);
 
-console.log(array1);
+//console.log(array1);
 
 getRandomInt(2, 14);
 
@@ -107,7 +113,9 @@ for (var i = 0; i < 16 ; i++) {
 var ulElement = document.getElementById('Arrays');
 console.log(ulElement);
 
-for (var i = 0; i < array1.length ; i++) {
+var allStores = [FirstAndPike, SeattleCenter, SeaTacAirport, CapitolHill, Alki];
+
+for (var i = 0; i < allStores.length ; i++) {
   var listItemElement = document.createElement('li');
 
   listItemElement.textContent = 6 + i + 'am: ' + array1[i];
