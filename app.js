@@ -16,6 +16,10 @@ var locationsObject = {
   4: 'Alki'
 };
 
+var FirstAndPike = 'First and Pike'
+
+var array1 = [locationsObject];
+
 var FirstAndPike = {
   minCustomers: 23,
   maxCustomers: 65,
@@ -23,14 +27,16 @@ var FirstAndPike = {
 }
 
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min)) + min
+
 }
 
-var total1 = getRandomInt(23, 65);
+console.log(FirstAndPike);
 
-console.log(total1 * FirstAndPike.avgCookieSales)
+for (var i = 0; i < 16 ; i++) {
+  array1.push( getRandomInt(FirstAndPike.minCustomers, FirstAndPike.maxCustomers))
+}
 
-  console.log('The average number of cookies sold per customer is ' + FirstAndPike.avgCookieSales)
 
 var SeaTacAirport = {
   minCustomers: 3,
@@ -38,15 +44,16 @@ var SeaTacAirport = {
   avgCookieSales: 1.2
 };
 
+console.log(SeaTacAirport);
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var total2 = getRandomInt(3, 24);
 
-console.log(total2 * SeaTacAirport.avgCookieSales)
-
-  console.log('The average number of cookies sold per customer is ' + SeaTacAirport.avgCookieSales)
+for (var i = 0; i < 16 ; i++) {
+  array1.push( getRandomInt(SeaTacAirport.minCustomers, SeaTacAirport.maxCustomers))
+}
 
 var SeattleCenter = {
   minCustomers: 11,
@@ -54,15 +61,18 @@ var SeattleCenter = {
   avgCookieSales: 3.7
 };
 
+console.log(SeattleCenter)
+
+
+
+for (var i = 0; i < 16 ; i++) {
+  array1.push( getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers))
+}
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var total3 = getRandomInt(11, 38);
-
-console.log(total3 * SeattleCenter.avgCookieSales)
-
-  console.log('The average number of cookies sold per customer is ' + SeattleCenter.avgCookieSales)
+getRandomInt(11, 38);
 
 var CapitolHill = {
   minCustomers: 20,
@@ -70,15 +80,13 @@ var CapitolHill = {
   avgCookieSales: 2.3
 };
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+console.log(CapitolHill);
+
+getRandomInt(20, 38);
+
+for (var i = 0; i < 16 ; i++) {
+  array1.push( getRandomInt(CapitolHill.minCustomers, CapitolHill.maxCustomers))
 }
-
-var total4 = getRandomInt(20, 38);
-
-console.log(total4 * CapitolHill.avgCookieSales)
-
-console.log('The average number of cookies sold per customer is ' + CapitolHill.avgCookieSales)
 
 var Alki = {
   minCustomers: 2,
@@ -86,29 +94,24 @@ var Alki = {
   avgCookieSales: 4.6
 };
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+console.log(Alki);
+
+console.log(array1);
+
+getRandomInt(2, 14);
+
+for (var i = 0; i < 16 ; i++) {
+  array1.push( getRandomInt(Alki.minCustomers, Alki.maxCustomers))
 }
-
-var total5 = getRandomInt(2, 14);
-
-console.log(total5 * Alki.avgCookieSales)
-
-console.log('The average number of cookies sold per customer is ' + Alki.avgCookieSales)
-
-var array = [total1, total2, total3, total4, total5
-]
-console.log(array)
-
 
 var ulElement = document.getElementById('Arrays');
 console.log(ulElement);
 
-for (var i = 0; i < array.length ; i++) {
-  var listItemElement = document.createElement('li');
+//for (var i = 0; i < array1.length ; i++) {
+  ///var listItemElement = document.createElement('li');
 
-  listItemElement.textContent = 'Total cookies = ' + array[i];
+  //listItemElement.textContent = 6 + i + 'am: ' + array1[i];
 
-  ulElement.appendChild(listItemElement);
-  console.log(ulElement.children);
-}
+  //ulElement.appendChild(listItemElement);
+  //console.log(ulElement.children);
+//}
