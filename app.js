@@ -107,11 +107,11 @@ for (var i = 0; i < 16 ; i++) {
 var ulElement = document.getElementById('Arrays');
 console.log(ulElement);
 
-//for (var i = 0; i < array1.length ; i++) {
-  ///var listItemElement = document.createElement('li');
+for (var i = 0; i < array1.length ; i++) {
+  var listItemElement = document.createElement('li');
 
-  //listItemElement.textContent = 6 + i + 'am: ' + array1[i];
+  listItemElement.textContent = 6 + i + 'am: ' + array1[i];
 
-  //ulElement.appendChild(listItemElement);
-  //console.log(ulElement.children);
-//}
+  ulElement.appendChild(listItemElement);
+  console.log(ulElement.children);
+}
