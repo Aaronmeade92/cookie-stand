@@ -8,18 +8,6 @@ var locations = [
   'Alki'
 ];
 
-var locationsObject = {
-  0: 'First and Pike',
-  1: 'SeaTac Airport',
-  2: 'Seattle Center',
-  3: 'Capitol Hill',
-  4: 'Alki'
-};
-
-
-var FirstAndPike = 'First and Pike'
-
-//var array1 = [locationsObject];
 
 var FirstAndPike = {
   minCustomers: 23,
@@ -28,17 +16,22 @@ var FirstAndPike = {
   hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 }
 
+var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
+
+for (var i = 0; i < hoursOpen.length ; i++) {
+ console.log(getRandomInt(FirstAndPike.minCustomers, FirstAndPike.maxCustomers));
+
+ var ulElement = document.getElementById('FirstAndPike')
+
+ var customerDataEl = document.createElement('li');
+ customerDataEl.textContent = hoursOpen[i] + ': ' + getRandomInt(FirstAndPike.minCustomers, FirstAndPike.maxCustomers);
+ ulElement.appendChild(customerDataEl);
+}
+
+
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min
-
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-
-console.log(FirstAndPike);
-
-for (var i = 0; i < 16 ; i++) {
-  array1.push( getRandomInt(FirstAndPike.minCustomers, FirstAndPike.maxCustomers))
-}
-
 
 var SeaTacAirport = {
   minCustomers: 3,
@@ -47,16 +40,16 @@ var SeaTacAirport = {
     hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
-console.log(SeaTacAirport);
+for (var i = 0; i < hoursOpen.length; i++) {
+ console.log(getRandomInt(SeaTacAirport.minCustomers, SeaTacAirport.maxCustomers));
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+ var ulElement = document.getElementById('SeaTac Airport')
+
+ var customerDataEl = document.createElement('li');
+ customerDataEl.textContent = hoursOpen[i] + ': ' + getRandomInt(SeaTacAirport.minCustomers, SeaTacAirport.maxCustomers);
+ ulElement.appendChild(customerDataEl);
 }
 
-
-for (var i = 0; i < 16 ; i++) {
-  array1.push( getRandomInt(SeaTacAirport.minCustomers, SeaTacAirport.maxCustomers))
-}
 
 var SeattleCenter = {
   minCustomers: 11,
@@ -65,18 +58,16 @@ var SeattleCenter = {
     hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
-console.log(SeattleCenter)
+for (var i = 0; i < hoursOpen.length; i++) {
+ console.log(getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers));
 
+ var ulElement = document.getElementById('SeattleCenter')
 
-
-for (var i = 0; i < 16 ; i++) {
-  array1.push( getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers))
+ var customerDataEl = document.createElement('li');
+ customerDataEl.textContent = hoursOpen[i] + ': ' + getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers);
+ ulElement.appendChild(customerDataEl);
 }
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 
-getRandomInt(11, 38);
 
 var CapitolHill = {
   minCustomers: 20,
@@ -85,13 +76,16 @@ var CapitolHill = {
     hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
-console.log(CapitolHill);
+for (var i = 0; i < hoursOpen.length; i++) {
+ console.log(getRandomInt(CapitolHill.minCustomers, CapitolHill.maxCustomers));
 
-getRandomInt(20, 38);
+ var ulElement = document.getElementById('Capitol Hill')
 
-for (var i = 0; i < 16 ; i++) {
-  array1.push( getRandomInt(CapitolHill.minCustomers, CapitolHill.maxCustomers))
+ var customerDataEl = document.createElement('li');
+ customerDataEl.textContent = hoursOpen[i] + ': ' + getRandomInt(CapitolHill.minCustomers, CapitolHill.maxCustomers);
+ ulElement.appendChild(customerDataEl);
 }
+
 
 var Alki = {
   minCustomers: 2,
@@ -100,26 +94,36 @@ var Alki = {
   hoursOpen: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
 };
 
-console.log(Alki);
+for (var i = 0; i < hoursOpen.length; i++) {
+ console.log(getRandomInt(Alki.minCustomers, Alki.maxCustomers));
 
-//console.log(array1);
+ var ulElement = document.getElementById('Alki')
 
-getRandomInt(2, 14);
-
-for (var i = 0; i < 16 ; i++) {
-  array1.push( getRandomInt(Alki.minCustomers, Alki.maxCustomers))
+ var customerDataEl = document.createElement('li');
+ customerDataEl.textContent = hoursOpen[i] + ': ' + getRandomInt(Alki.minCustomers, Alki.maxCustomers);
+ ulElement.appendChild(customerDataEl);
 }
 
-var ulElement = document.getElementById('Arrays');
-console.log(ulElement);
 
-var allStores = [FirstAndPike, SeattleCenter, SeaTacAirport, CapitolHill, Alki];
+// var customerDataEl = document.createElement('li');
+// customerDataEl.appendChild(customerDataEl);
+// customerDataEl.textContent = getRandomInt(Alki.minCustomers, Alki.maxCustomers)
+// customerDataEl.appendChild(customerDataEl);
 
-for (var i = 0; i < allStores.length ; i++) {
-  var listItemElement = document.createElement('li');
 
-  listItemElement.textContent = 6 + i + 'am: ' + array1[i];
 
-  ulElement.appendChild(listItemElement);
-  console.log(ulElement.children);
-}
+// var locationsObject = {
+//   0: FirstandPike,
+//   1: SeaTacAirport,
+//   2: SeattleCenter,
+//   3: CapitolHill,
+//   4: Alki
+// };
+
+// function getRandomInt(min, max) {
+//   return Math.floor(Math.random() * (max - min)) + min;
+// }
+//
+// for (var i = 0; i < 16 ; i++) {
+//  (getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers))
+// }
