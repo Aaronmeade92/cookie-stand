@@ -13,25 +13,34 @@ header{
 section {
   border: 5px solid black;
   margin: 10px;
-  height: 800px;
+  height: 400px;
   width: 300px;
-  margin-top: 50px;
+  margin-top: 250px;
+  background-color: #7288B9;
+
 }
 
 #a {
   display:block;
   float:right;
   margin-right: px;
-  background-color: 
+  background-color:#7288B9;
 
 }
 
 #b {
   display: block;
   margin-right:
+  background-color: #7288B9;
 }
 
 #c {
   display: block;
+  background-color: #7288B9;
 
+}
+
+table, #Table {
+  border: 5px solid black;
+  text-align: center;
 }
