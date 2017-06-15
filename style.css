@@ -1,9 +1,9 @@
 body {
   background-image: url(https://github.com/codefellows/seattle-201n8/blob/master/class-06-dom-objects-domain_modeling/assets/salmon.png?raw=true);
-  background-position: top;
   background-color: #F4BAC8;
   background-repeat: no-repeat;
-
+  background-position: top;
+  
 }
 header{
   margin-left: 500px;
@@ -40,7 +40,7 @@ section {
 
 }
 
-table, #Table {
+/*table, #Table {
   border: 5px solid black;
-  text-align: center;
+  text-align: center;*/
 }

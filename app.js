@@ -22,34 +22,31 @@ function Location(minCustomers, maxCustomers, avgCookieSales, storeLocation) {
   this.storeLocation = storeLocation
 }
 
-// var tableEl = document.getElementById('generated-table');
 var tableBodyEl = document.getElementById('storeHours')
-// tableEl.appendChild(tableBodyEl);
 
-  function makeRow(item){
-    //Step 1 - create element
-    var newRowEl = document.createElement('tr');
+function makeRow(item){
+  var newRowEl = document.createElement('tr');
+  tableBodyEl.appendChild(newRowEl)
 
-    //Step 2 - Configure/Mutate the ROW element
-      var itemDataEl = document.createElement('td');
-    itemDataEl.textContent = item.storeLocation ;
-    newRowEl.appendChild(itemDataEl);
 
-    var priceDataEl = document.createElement('td');
-    priceDataEl.textContent = item.avgCookieSales;
-    newRowEl.appendChild(priceDataEl);
+  // var itemDataEl = document.createElement('th');
+  // itemDataEl.textContent = item.storeLocation ;
+  // newRowEl.appendChild(itemDataEl);
 
-    var hoursEl = document.createElement('td');
-    hoursEl.textContent = hoursOpen;
-    newRowEl.appendChild(hoursEl);
+  var priceDataEl = document.createElement('td');
+  priceDataEl.textContent = getRandomInt(item.minCustomers, item.maxCustomers);
+  newRowEl.appendChild(priceDataEl);
 
-    //Step 3 - Append element to the DOM
-    tableBodyEl.appendChild(newRowEl);
+    // var hoursEl = document.createElement('tr');
+    // hoursEl.textContent = hoursOpen;
+    // tableBodyEl.appendChild(hoursEl);
+
+    // tableBodyEl.appendChild(newRowEl);
   }
 
-  for (var i = 0; i < storeLocations.length; i++) {
-    makeRow(storeLocations[i]);
-}
+//   for (var i = 0; i < storeHours.length; i++) {
+//     makeRow(storeLocations[i]);
+// }
 
 // for (var i = 0; i < storeLocations.length ; i++) {
 //   {
@@ -102,7 +99,7 @@ var tableBodyEl = document.getElementById('storeHours')
 //  var customerDataEl = document.createElement('td');
 //  customerDataEl.textContent = getRandomInt(Alki.minCustomers, Alki.maxCustomers);
 //  ulElement.appendChild(newRowEl);
-//   }
+  // }
 
 
 for (var i = 0; i < storeLocations.length; i++) {
