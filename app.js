@@ -11,7 +11,7 @@ var storeLocations = [FirstAndPike, SeaTacAirport, SeattleCenter, CapitolHill, A
 var storeNames = ['First and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki']
 
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
@@ -19,89 +19,30 @@ function Location(minCustomers, maxCustomers, avgCookieSales, storeLocation) {
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.avgCookieSales = avgCookieSales;
-  this.storeLocation = storeLocation
+  this.storeLocation = storeLocation;
 }
 
-var tableBodyEl = document.getElementById('storeHours')
+var tableBodyEl = document.getElementById('cookieSales');
 
 function makeRow(item){
   var newRowEl = document.createElement('tr');
-  tableBodyEl.appendChild(newRowEl)
+  tableBodyEl.appendChild(newRowEl);
 
+  var locationColumnEl = document.createElement('td');
+  locationColumnEl.textContent = item.storeLocation;
+  newRowEl.appendChild(locationColumnEl);
 
-  // var itemDataEl = document.createElement('th');
-  // itemDataEl.textContent = item.storeLocation ;
-  // newRowEl.appendChild(itemDataEl);
+for (var i = 0; i < hoursOpen.length; i++) {
+
 
   var priceDataEl = document.createElement('td');
-  priceDataEl.textContent = getRandomInt(item.minCustomers, item.maxCustomers);
+  priceDataEl.textContent = Math.floor((getRandomInt(item.minCustomers, item.maxCustomers)) * item.avgCookieSales);
   newRowEl.appendChild(priceDataEl);
 
-    // var hoursEl = document.createElement('tr');
-    // hoursEl.textContent = hoursOpen;
-    // tableBodyEl.appendChild(hoursEl);
-
-    // tableBodyEl.appendChild(newRowEl);
   }
-
-//   for (var i = 0; i < storeHours.length; i++) {
-//     makeRow(storeLocations[i]);
-// }
-
-// for (var i = 0; i < storeLocations.length ; i++) {
-//   {
-//
-//  var ulElement = document.getElementById('storeHours')
-//
-//  var customerDataEl = document.createElement('th');
-//  customerDataEl.textContent =
-//  ulElement.appendChild(customerDataEl);
-//
-//  var customerRowsEl = document.createElement('th');
-//  customerDataEl.textContent = 'SeaTac Airport'
-//  ulElement.appendChild(customerRowsEl);
-//
-//  var customerRowsEl = document.createElement('th');
-//  customerDataEl.textContent = 'Seattle Center'
-//  ulElement.appendChild(customerRowsEl);
-//
-//  var customerRowsEl = document.createElement('th');
-//  customerDataEl.textContent = 'Capitol Hill'
-//  ulElement.appendChild(customerRowsEl);
-//
-//  var customerRowsEl = document.createElement('th');
-//  customerDataEl.textContent = 'Alki'
-//   ulElement.appendChild(customerRowsEl);
-// }
-
-
-// for (var i = 0; i < hoursOpen.length ; i++) {
-// var newRowEl = document.createElement('tr')
-//
-//  var ulElement = document.getElementById('cookieSales')
-//
-//  var customerDataEl = document.createElement('td');
-//  customerDataEl.textContent = getRandomInt(FirstAndPike.minCustomers, FirstAndPike.maxCustomers);
-//  ulElement.appendChild(newRowEl);
-//
-//  var customerDataEl = document.createElement('td');
-//  customerDataEl.textContent = getRandomInt(SeaTacAirport.minCustomers, SeaTacAirport.maxCustomers);
-//  ulElement.appendChild(newRowEl);
-//
-//  var customerDataEl = document.createElement('td');
-//  customerDataEl.textContent = getRandomInt(SeattleCenter.minCustomers, SeattleCenter.maxCustomers);
-//  ulElement.appendChild(newRowEl);
-//
-//  var customerDataEl = document.createElement('td');
-//  customerDataEl.textContent = getRandomInt(CapitolHill.minCustomers, CapitolHill.maxCustomers);
-//  ulElement.appendChild(newRowEl);
-//
-//  var customerDataEl = document.createElement('td');
-//  customerDataEl.textContent = getRandomInt(Alki.minCustomers, Alki.maxCustomers);
-//  ulElement.appendChild(newRowEl);
-  // }
+}
 
 
 for (var i = 0; i < storeLocations.length; i++) {
-  makeRow(storeLocations[i])
-    }
+  makeRow(storeLocations[i]);
+}
