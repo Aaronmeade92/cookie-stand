@@ -10,6 +10,34 @@
     <section id="c">This is the shop!</section>
     <table id= "cookieSales">
         <thead id="Table">
+          <h1>Cokie Sales</h1>
+          <form id="form">
+  <fieldset>
+    <legend>New Item:</legend>
+
+    <div>
+      <label for="storeLocations">New Store Name:</label>
+      <input id="storeLocations" type="text" name="Name" placeholder="Store" required>
+    </div>
+
+    <div>
+      <label for="minCustomers">Minimum Customers:</label>
+      <input type="number" name="minCustomers" value="" required>
+    </div>
+
+    <div>
+      <label for="maxCustomers">Max Customers</label>
+      <input type="number" name="maxCustomers" value="">
+    </div>
+
+    <div>
+      <label for="avgCookieSales">Average Cookies</label>
+      <input type="number" name="avgCookieSales" value=""
+    </div>
+
+    <input type="submit" value="Add New Item">
+  </fieldset>
+</form>
           <tr>
             <th>Location</th>
             <th>6am</th>
@@ -25,25 +53,9 @@
             <th>4pm</th>
             <th>5pm</th>
             <th>6pm</th>
+            <th>Daily Location Total</th>
           </tr>
         </thead>
-      <!-- <tbody id="storeHours">
-        <tr>
-          <td id="FirstAndPike">First and Pike</td>
-        </tr>
-        <tr>
-          <td id="SeaTacAirport">Seattle Center</td>
-        </tr>
-        <tr>
-          <td id"SeattleCenter">SeaTac Airport</td>
-        </tr>
-        <tr>
-          <td id="CapitolHill">Capitol Hill</td>
-        </tr>
-        <tr>
-          <td id="Alki">Alki</td>
-        </tr>
-      </tbody> -->
     </table>
 <link rel= "stylesheet", href="style.css", type="text/css">
     <script type="text/javascript" src="app.js"></script>

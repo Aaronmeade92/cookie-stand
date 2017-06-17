@@ -46,3 +46,19 @@ for (var i = 0; i < hoursOpen.length; i++) {
 for (var i = 0; i < storeLocations.length; i++) {
   makeRow(storeLocations[i]);
 }
+
+var formEl = document.getElementById('form');
+
+formEl.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  var storeLocations = event.target.storeLocations.value;
+  var minCustomers = parseInt(event.target.minCustomers.value);
+  var maxCustomers = parseInt(event.target.maxCustomers.value);
+  var avgCookieSales = parseInt(event.target.avgCookieSales.value);
+
+  var newStore = new Location(minCustomers, maxCustomers, avgCookieSales, storeLocations);
+  makeRow(newStore);
+}
