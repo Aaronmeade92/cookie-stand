@@ -20,6 +20,9 @@ function Location(minCustomers, maxCustomers, avgCookieSales, storeLocation) {
   this.maxCustomers = maxCustomers;
   this.avgCookieSales = avgCookieSales;
   this.storeLocation = storeLocation;
+  this.totalCookies = function(){
+
+  }
 }
 
 var tableBodyEl = document.getElementById('cookieSales');
@@ -31,17 +34,25 @@ function makeRow(item){
   var locationColumnEl = document.createElement('td');
   locationColumnEl.textContent = item.storeLocation;
   newRowEl.appendChild(locationColumnEl);
+var total = 0
 
 for (var i = 0; i < hoursOpen.length; i++) {
 
-
   var priceDataEl = document.createElement('td');
-  priceDataEl.textContent = Math.floor((getRandomInt(item.minCustomers, item.maxCustomers)) * item.avgCookieSales);
+  var random =  Math.floor((getRandomInt(item.minCustomers, item.maxCustomers)) * item.avgCookieSales);
+  priceDataEl.textContent = random
   newRowEl.appendChild(priceDataEl);
-
+  total = total + random
   }
+  console.log(total)
+  var totalDataEl = document.createElement('td');
+  totalDataEl.textContent = total + random;
+  newRowEl.appendChild(totalDataEl)
 }
 
+// function hourlySales() {
+//   total =  Math.floor((getRandomInt(Location.minCustomers, Location.maxCustomers)) * Location.avgCookieSales);
+// }
 
 for (var i = 0; i < storeLocations.length; i++) {
   makeRow(storeLocations[i]);

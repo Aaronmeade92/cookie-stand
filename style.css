@@ -3,44 +3,35 @@ body {
   background-color: #F4BAC8;
   background-repeat: no-repeat;
   background-position: top;
-  
+
 }
 header{
   margin-left: 500px;
 }
 
-
-section {
-  border: 5px solid black;
-  margin: 10px;
-  height: 400px;
+#Cookies {
+  border: 5px black solid;
+  margin: 20px;
+  text-align: center;
+  height: 200px;
   width: 300px;
-  margin-top: 250px;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 300px;
+  background-color: #7288B9
+}
+
+ul {
+  border: 5px black solid;
   background-color: #7288B9;
-
+  text-align: center;
 }
 
-#a {
-  display:block;
-  float:right;
-  margin-right: px;
-  background-color:#7288B9;
-
+li {
+  display: inline;
+  margin-right: 10px;
 }
 
-#b {
-  display: block;
-  margin-right:
-  background-color: #7288B9;
-}
-
-#c {
-  display: block;
-  background-color: #7288B9;
-
-}
-
-/*table, #Table {
-  border: 5px solid black;
-  text-align: center;*/
+table {
+  border: 5px black solid;
 }
